@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_KEY = 'AIzaSyBUmHLspfgzdxJ1c4xSMW3LzHgDbyl6kVY'
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
 
 const authenticate = async (email, password, mode) => {
     const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`
